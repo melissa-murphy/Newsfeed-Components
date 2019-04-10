@@ -8,17 +8,18 @@ class Article {
     this.expandButton = '.expandButton';
     // Using your expandButton reference, update the text on your expandButton to say "expand"
     const button = document.createElement('button');
-    const buttonText = document.createTextNode('expand');
+    const expandButton = document.createTextNode('expand');
 
-    button.appendChild(buttonText);
+    button.appendChild(expandButton);
     document.querySelector('.expandButton').appendChild(button);
     // Set a click handler on the expandButton reference, calling the expandArticle method.
-    
-  }
-
+    button.addEventListener('click', () => {
+      expandArticle();
+    })
+  }// Methods
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
-
+    return this.expandButton.classList.toggle('article--open');
   }
 }
 
