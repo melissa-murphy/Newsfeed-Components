@@ -16,7 +16,7 @@ class Article {
   }// Methods
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
-    this.expandButton.classList.toggle('article--open');
+    this.domElement.classList.toggle('article-open');
   }
 }
 
@@ -33,7 +33,3 @@ console.log(articles);
 articles.forEach(articleTemplate => {
   return new Article(articleTemplate);
 });
-
-/*
-menuButton.addEventListener('click', () => {toggleMenu();});
-*/
