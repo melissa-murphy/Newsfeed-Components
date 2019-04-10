@@ -28,4 +28,4 @@ class Article {
 
 let articles = document.querySelectorAll('.article');
 console.log(articles);
-articles.forEach
+articles.forEach(element => {console.log(element);});
